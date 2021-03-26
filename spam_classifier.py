@@ -70,24 +70,3 @@ ysa_binary_tahmin = [1 if i > 0.5 else 0 for i in ysa_tahmin]
 
 sns.heatmap(confusion_matrix(y_test,ysa_binary_tahmin), annot = True, cmap = "PRGn")
 plt.show()
-
-
-#Extra Testing
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-test = pd.read_csv("SMSSpamCollection.csv")
-
-testX = test["Go until jurong point, crazy.. Available only in bugis n great world la e buffet... Cine there got amore wat..."].values
-testy = test["ham"]
-testy = testy.replace("ham",0.).replace("spam",1.)
-
-test = temizle(testX)
-
-sequences2 = tok.texts_to_sequences(test)
-testingX = sequence.pad_sequences(sequences2, padding = "post", truncating ="post")
-
-ysa_tahmin = ysa.predict(testingX)
-ysa_binary_tahmin = [1 if i > 0.5 else 0 for i in ysa_tahmin]
-
-sns.heatmap(confusion_matrix(testy,ysa_binary_tahmin), annot = True, cmap = "PRGn")
-plt.show()
