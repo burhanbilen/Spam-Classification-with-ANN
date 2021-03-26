@@ -75,7 +75,7 @@ plt.show()
 #Extra Testing
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-test = pd.read_csv("spam_test.csv")
+test = pd.read_csv("SMSSpamCollection.csv")
 
 testX = test["Go until jurong point, crazy.. Available only in bugis n great world la e buffet... Cine there got amore wat..."].values
 testy = test["ham"]
