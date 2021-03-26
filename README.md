@@ -1,5 +1,5 @@
 # Spam-Classification-with-ANN
-Spam-Ham Classification on Text Data.
+Spam-Ham Classification on SMS Data.
 
 To get the dataset visit the link:
 
